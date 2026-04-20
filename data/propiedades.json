@@ -1,0 +1,153 @@
+{
+  "propiedades": [
+    {
+      "id": 1,
+      "titulo": "Departamento Moderno en Miraflores",
+      "precio": 185000,
+      "m2": 95,
+      "habitaciones": 3,
+      "banos": 2,
+      "ubicacion": "Miraflores",
+      "imagenes": [
+        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&q=80",
+        "https://images.unsplash.com/photo-1560449752-3fd74f5f509c?w=1200&q=80",
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200&q=80",
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80"
+      ],
+      "amenidades": ["Piscina", "Gimnasio", "Parrilla", "Seguridad 24h"],
+      "descripcion": "Hermoso departamento moderno en el corazón de Miraflores. Cuenta con acabados de primera, amplia sala de estar con luz natural, cocina equipada y excelente vista. A pocos pasos del Malecón y zonas comerciales.",
+      "plano": {
+        "imagen": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80",
+        "puntos": [
+          { "nombre": "Sala", "x": 25, "y": 40, "imagen": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1000&q=80" },
+          { "nombre": "Cocina", "x": 55, "y": 30, "imagen": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1000&q=80" },
+          { "nombre": "Habitación 1", "x": 75, "y": 55, "imagen": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1000&q=80" },
+          { "nombre": "Habitación 2", "x": 30, "y": 70, "imagen": "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=1000&q=80" }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "titulo": "Casa Familiar en La Molina",
+      "precio": 320000,
+      "m2": 220,
+      "habitaciones": 4,
+      "banos": 3,
+      "ubicacion": "La Molina",
+      "imagenes": [
+        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&q=80",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1200&q=80",
+        "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=1200&q=80"
+      ],
+      "amenidades": ["Jardín", "Cochera doble", "Parrilla", "Seguridad 24h"],
+      "descripcion": "Amplia casa familiar en zona residencial tranquila. Tres niveles con jardín interior, amplio comedor, estudio independiente y terraza con vista panorámica. Ideal para familias.",
+      "plano": {
+        "imagen": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80",
+        "puntos": [
+          { "nombre": "Sala", "x": 20, "y": 35, "imagen": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1000&q=80" },
+          { "nombre": "Cocina", "x": 50, "y": 25, "imagen": "https://images.unsplash.com/photo-1556909172-6ab63f18fd12?w=1000&q=80" },
+          { "nombre": "Habitación 1", "x": 75, "y": 50, "imagen": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=1000&q=80" },
+          { "nombre": "Habitación 2", "x": 35, "y": 75, "imagen": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=1000&q=80" }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "titulo": "Loft Minimalista en Barranco",
+      "precio": 145000,
+      "m2": 70,
+      "habitaciones": 2,
+      "banos": 1,
+      "ubicacion": "Barranco",
+      "imagenes": [
+        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1200&q=80",
+        "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1200&q=80",
+        "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1200&q=80"
+      ],
+      "amenidades": ["Terraza", "Seguridad 24h", "Ascensor"],
+      "descripcion": "Loft de diseño contemporáneo en zona bohemia de Barranco. Espacios abiertos, techos altos y grandes ventanales. Ideal para profesionales que buscan estilo y ubicación.",
+      "plano": {
+        "imagen": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80",
+        "puntos": [
+          { "nombre": "Sala", "x": 30, "y": 45, "imagen": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=1000&q=80" },
+          { "nombre": "Cocina", "x": 60, "y": 35, "imagen": "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=1000&q=80" },
+          { "nombre": "Habitación", "x": 70, "y": 65, "imagen": "https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=1000&q=80" }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "titulo": "Penthouse con Vista al Mar",
+      "precio": 450000,
+      "m2": 180,
+      "habitaciones": 3,
+      "banos": 3,
+      "ubicacion": "San Isidro",
+      "imagenes": [
+        "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80",
+        "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=80",
+        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80"
+      ],
+      "amenidades": ["Piscina", "Gimnasio", "Jacuzzi", "Seguridad 24h", "Ascensor", "Terraza"],
+      "descripcion": "Exclusivo penthouse con vista panorámica al mar. Acabados de lujo, terraza privada con jacuzzi, cocina gourmet y dormitorio principal con walk-in closet. Ubicación privilegiada.",
+      "plano": {
+        "imagen": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80",
+        "puntos": [
+          { "nombre": "Sala", "x": 25, "y": 40, "imagen": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1000&q=80" },
+          { "nombre": "Cocina", "x": 55, "y": 25, "imagen": "https://images.unsplash.com/photo-1565183997392-2f6f122e5912?w=1000&q=80" },
+          { "nombre": "Habitación 1", "x": 80, "y": 50, "imagen": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1000&q=80" },
+          { "nombre": "Terraza", "x": 40, "y": 75, "imagen": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1000&q=80" }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "titulo": "Departamento Acogedor en Surco",
+      "precio": 98000,
+      "m2": 62,
+      "habitaciones": 2,
+      "banos": 1,
+      "ubicacion": "Surco",
+      "imagenes": [
+        "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=1200&q=80",
+        "https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=1200&q=80",
+        "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=1200&q=80"
+      ],
+      "amenidades": ["Cochera", "Seguridad 24h", "Ascensor"],
+      "descripcion": "Departamento acogedor en zona tranquila y segura. Excelente distribución, cocina abierta hacia sala-comedor, dormitorio principal con closet empotrado. Cerca de parques y colegios.",
+      "plano": {
+        "imagen": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80",
+        "puntos": [
+          { "nombre": "Sala", "x": 30, "y": 40, "imagen": "https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?w=1000&q=80" },
+          { "nombre": "Cocina", "x": 60, "y": 30, "imagen": "https://images.unsplash.com/photo-1556909172-89a5a73dcbc0?w=1000&q=80" },
+          { "nombre": "Habitación", "x": 70, "y": 60, "imagen": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=1000&q=80" }
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "titulo": "Casa de Playa en Asia",
+      "precio": 380000,
+      "m2": 260,
+      "habitaciones": 5,
+      "banos": 4,
+      "ubicacion": "Asia",
+      "imagenes": [
+        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80",
+        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&q=80",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80"
+      ],
+      "amenidades": ["Piscina", "Jardín", "Parrilla", "Vista al mar", "Cochera doble"],
+      "descripcion": "Espectacular casa de playa a pocos metros del mar. Amplios espacios, piscina privada, terraza con parrilla y vista directa al océano. Perfecta para vacaciones en familia.",
+      "plano": {
+        "imagen": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80",
+        "puntos": [
+          { "nombre": "Sala", "x": 25, "y": 40, "imagen": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1000&q=80" },
+          { "nombre": "Cocina", "x": 55, "y": 30, "imagen": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1000&q=80" },
+          { "nombre": "Habitación 1", "x": 75, "y": 55, "imagen": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1000&q=80" },
+          { "nombre": "Piscina", "x": 40, "y": 80, "imagen": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1000&q=80" }
+        ]
+      }
+    }
+  ]
+}

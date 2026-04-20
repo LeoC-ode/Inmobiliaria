@@ -1,0 +1,129 @@
+Crea una web moderna, elegante y altamente escalable para una inmobiliaria. El diseño debe ser limpio, minimalista, responsive (mobile-first) y enfocado en conversión de clientes.
+
+IMPORTANTE:
+La web debe estar preparada para funcionar como plantilla reutilizable para múltiples inmobiliarias, por lo que los datos deben estar desacoplados del diseño (pensado para integrarse luego con JSON).
+
+----------------------------------------
+ESTRUCTURA GENERAL
+----------------------------------------
+
+1. HOME (Landing principal)
+- Hero section con imagen de alta calidad de propiedades
+- Título: “Encuentra tu hogar ideal hoy”
+- Subtítulo: “Explora las mejores oportunidades inmobiliarias seleccionadas para ti”
+- Carrusel de propiedades destacadas (cards modernas con imagen, precio, ubicación)
+- Botón principal grande (CTA):
+  TEXTO: “Encontrar mi inmueble ideal”
+  Debe ser visualmente dominante y centrado
+
+----------------------------------------
+2. SECCIÓN DE PROPIEDADES DESTACADAS
+----------------------------------------
+- Grid de tarjetas modernas
+- Cada tarjeta debe incluir:
+  - Imagen principal
+  - Precio destacado
+  - Ubicación
+  - Metros cuadrados
+  - Número de habitaciones
+- Efecto hover con animación suave
+- Diseño tipo Airbnb pero más limpio
+
+----------------------------------------
+3. MOTOR DE BÚSQUEDA (UI)
+----------------------------------------
+Diseñar una sección de filtros (aunque inicialmente sea visual):
+- Rango de precio (slider)
+- Metros cuadrados (input o slider)
+- Número de habitaciones (selector)
+- Ubicación por distrito (dropdown)
+- Botón “Buscar”
+
+IMPORTANTE:
+Diseñar los componentes listos para ser conectados posteriormente con lógica JavaScript.
+
+----------------------------------------
+4. DETALLE DEL INMUEBLE
+----------------------------------------
+Crear layout de página de detalle con:
+
+A. GALERÍA:
+- Imagen principal grande
+- Miniaturas debajo o lateral
+- Estilo tipo Airbnb (UX fluido)
+
+B. INFORMACIÓN:
+- Precio
+- Ubicación
+- Características principales
+
+C. PLANO INTERACTIVO (solo UI/visual):
+- Imagen tipo plano del inmueble
+- Puntos flotantes (globos) sobre el plano:
+  - “Habitación 1”
+  - “Habitación 2”
+  - “Sala”
+  - “Cocina”
+- Al hacer clic (simulado visualmente):
+  - Mostrar popup o modal con imagen del ambiente
+
+D. AMENIDADES:
+- Lista con iconos:
+  - Piscina
+  - Gimnasio
+  - Zona de parrilla
+  - Otros
+
+----------------------------------------
+5. GENERACIÓN DE LEADS
+----------------------------------------
+- Botón visible: “Solicitar información”
+- Modal o sección con formulario:
+  - Nombre
+  - Teléfono
+  - Email
+  - Mensaje
+- Botón “Enviar”
+- Diseño enfocado en conversión
+
+----------------------------------------
+6. ELEMENTOS FIJOS
+----------------------------------------
+- Botón flotante de WhatsApp en esquina inferior
+- Navbar simple con logo y navegación
+- Footer con información básica
+
+----------------------------------------
+7. DISEÑO Y ESTILO
+----------------------------------------
+- Estilo minimalista y premium
+- Espaciado amplio
+- Bordes redondeados suaves
+- Sombras ligeras
+
+PALETA DE COLORES:
+- Fondo: blanco o gris muy claro
+- Texto: gris oscuro
+- Secundario: gris medio
+- Color de acento: azul moderno (#2563EB)
+
+TIPOGRAFÍA:
+- Sans-serif moderna
+
+----------------------------------------
+8. OPTIMIZACIÓN
+----------------------------------------
+- Mobile-first
+- Animaciones suaves (hover, fade, transitions)
+- Carga visual ligera
+
+----------------------------------------
+OBJETIVO FINAL
+----------------------------------------
+Crear una experiencia visual que:
+- Retenga al usuario
+- Facilite la búsqueda de propiedades
+- Genere leads de alta calidad
+
+IMPORTANTE:
+No hardcodear datos reales. Usar contenido placeholder estructurado para futura conexión con JSON.

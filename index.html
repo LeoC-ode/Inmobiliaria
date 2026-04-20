@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Encuentra tu hogar ideal. Propiedades seleccionadas con la mejor ubicación y precio." />
+  <title>Casa Ideal — Inmobiliaria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html" aria-label="Inicio">
+        <span class="logo-mark">◈</span>
+        <span class="logo-text">Casa<span>Ideal</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio">Inicio</a>
+        <a href="#propiedades">Propiedades</a>
+        <a href="#buscar">Buscar</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <h1 class="hero-title">Encuentra tu hogar ideal hoy</h1>
+      <p class="hero-sub">Explora las mejores oportunidades inmobiliarias seleccionadas para ti.</p>
+      <a href="#buscar" class="btn-primary btn-hero">Encontrar mi inmueble ideal</a>
+    </div>
+  </section>
+
+  <!-- BUSCADOR -->
+  <section class="search-section" id="buscar">
+    <div class="container">
+      <h2 class="section-title">Motor de búsqueda</h2>
+      <p class="section-sub">Filtra las propiedades según tus necesidades</p>
+
+      <form class="search-form" id="searchForm" novalidate>
+        <div class="form-field">
+          <label for="fPrecio">Precio máximo (USD)</label>
+          <input type="range" id="fPrecio" min="50000" max="500000" step="5000" value="500000" />
+          <span class="range-value" id="fPrecioValue">$500,000</span>
+        </div>
+
+        <div class="form-field">
+          <label for="fM2">Metros mínimos</label>
+          <input type="number" id="fM2" min="0" step="5" placeholder="Ej. 60" />
+        </div>
+
+        <div class="form-field">
+          <label for="fHab">Habitaciones</label>
+          <select id="fHab">
+            <option value="">Cualquiera</option>
+            <option value="1">1+</option>
+            <option value="2">2+</option>
+            <option value="3">3+</option>
+            <option value="4">4+</option>
+            <option value="5">5+</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="fUbic">Ubicación</label>
+          <select id="fUbic">
+            <option value="">Todos los distritos</option>
+          </select>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Buscar</button>
+          <button type="button" class="btn-secondary" id="btnReset">Limpiar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- PROPIEDADES -->
+  <section class="properties-section" id="propiedades">
+    <div class="container">
+      <h2 class="section-title">Propiedades destacadas</h2>
+      <p class="section-sub">Selección curada de inmuebles disponibles</p>
+
+      <div class="properties-grid" id="propertiesGrid">
+        <div class="loader">Cargando propiedades...</div>
+      </div>
+
+      <p class="no-results" id="noResults" hidden>No se encontraron propiedades con esos filtros.</p>
+    </div>
+  </section>
+
+  <!-- MODAL DETALLE -->
+  <div class="modal" id="detailModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-body modal-detail" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+      <button class="modal-close" data-close aria-label="Cerrar">×</button>
+      <div id="detailContent"></div>
+    </div>
+  </div>
+
+  <!-- MODAL AMBIENTE (PLANO) -->
+  <div class="modal" id="roomModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-room></div>
+    <div class="modal-body modal-room" role="dialog" aria-modal="true">
+      <button class="modal-close" data-close-room aria-label="Cerrar">×</button>
+      <h3 id="roomTitle"></h3>
+      <img id="roomImage" src="" alt="" />
+    </div>
+  </div>
+
+  <!-- MODAL LEAD -->
+  <div class="modal" id="leadModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-lead></div>
+    <div class="modal-body modal-lead" role="dialog" aria-modal="true" aria-labelledby="leadTitle">
+      <button class="modal-close" data-close-lead aria-label="Cerrar">×</button>
+      <h3 id="leadTitle">Solicitar información</h3>
+      <p class="lead-sub" id="leadSub">Déjanos tus datos y un asesor te contactará pronto.</p>
+      <form class="lead-form" id="leadForm" novalidate>
+        <div class="form-field">
+          <label for="lNombre">Nombre completo</label>
+          <input type="text" id="lNombre" name="nombre" required autocomplete="name" />
+        </div>
+        <div class="form-field">
+          <label for="lTelefono">Teléfono</label>
+          <input type="tel" id="lTelefono" name="telefono" required autocomplete="tel" />
+        </div>
+        <div class="form-field">
+          <label for="lEmail">Email</label>
+          <input type="email" id="lEmail" name="email" required autocomplete="email" />
+        </div>
+        <div class="form-field">
+          <label for="lMensaje">Mensaje</label>
+          <textarea id="lMensaje" name="mensaje" rows="3"></textarea>
+        </div>
+        <input type="hidden" id="lPropiedad" name="propiedad" />
+        <button type="submit" class="btn-primary btn-block" id="leadSubmit">Enviar solicitud</button>
+        <p class="form-status" id="leadStatus" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- WHATSAPP FLOTANTE -->
+  <a
+    href="https://wa.me/51999999999?text=Hola%20estoy%20interesado%20en%20un%20inmueble"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+    aria-label="Contactar por WhatsApp"
+  >
+    <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+      <path fill="currentColor" d="M16.003 3C9.38 3 4 8.38 4 15.003c0 2.38.7 4.6 1.9 6.47L4 29l7.72-1.84a11.93 11.93 0 0 0 4.28.79h.003C22.624 27.95 28 22.57 28 15.95 28 12.74 26.72 9.71 24.43 7.42A12.07 12.07 0 0 0 16.003 3Zm0 21.9c-1.35 0-2.67-.36-3.82-1.05l-.27-.16-4.58 1.1 1.12-4.48-.18-.28a9.9 9.9 0 1 1 7.73 4.87Zm5.68-7.36c-.31-.16-1.83-.9-2.12-1-.28-.1-.48-.16-.69.16-.2.31-.79 1-.97 1.2-.18.2-.36.23-.67.08-.31-.16-1.3-.48-2.48-1.53-.92-.82-1.54-1.83-1.72-2.14-.18-.31-.02-.48.14-.63.14-.14.31-.36.47-.54.16-.18.2-.31.31-.52.1-.2.05-.39-.03-.54-.08-.16-.69-1.66-.95-2.28-.25-.6-.51-.52-.69-.53l-.59-.01a1.13 1.13 0 0 0-.82.38c-.28.31-1.08 1.06-1.08 2.58 0 1.52 1.11 3 1.26 3.2.16.2 2.18 3.33 5.28 4.67.74.32 1.31.51 1.76.65.74.23 1.41.2 1.94.12.59-.09 1.83-.75 2.09-1.47.26-.72.26-1.33.18-1.47-.08-.14-.28-.22-.59-.38Z"/>
+    </svg>
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contacto">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo logo--light">
+          <span class="logo-mark">◈</span>
+          <span class="logo-text">Casa<span>Ideal</span></span>
+        </div>
+        <p>Tu aliado para encontrar el hogar que siempre soñaste.</p>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p>Lima, Perú</p>
+        <p>info@casaideal.pe</p>
+        <p>+51 999 999 999</p>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <a href="#inicio">Inicio</a>
+        <a href="#propiedades">Propiedades</a>
+        <a href="#buscar">Buscar</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <small>© <span id="year"></span> CasaIdeal. Todos los derechos reservados.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
