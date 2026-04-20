@@ -239,19 +239,41 @@ function renderDetail(p) {
   const planoHTML = plano && plano.imagen
     ? `
       <h3 class="detail-section-title">Plano interactivo</h3>
-      <div class="plano-wrap" id="planoWrap">
-        <img src="${escapeAttr(plano.imagen)}" alt="Plano del inmueble" />
-        ${(plano.puntos || [])
-          .map(
-            (pt, i) => `
-          <button type="button" class="plano-point"
-            style="left:${Number(pt.x) || 50}%; top:${Number(pt.y) || 50}%;"
-            data-room-index="${i}">
-            ${escapeHtml(pt.nombre || "Zona")}
-          </button>
-        `
-          )
-          .join("")}
+      <div class="plano-frame">
+        <div class="plano-head">
+          <div class="plano-brand">
+            <span class="plano-slash">//</span>
+            <strong>${escapeHtml((p.titulo || "").toUpperCase())}</strong>
+            <span class="plano-zone">${escapeHtml(p.ubicacion || "")}</span>
+          </div>
+          <div class="plano-meta">
+            <span class="plano-unit">${escapeHtml(plano.nivel || "NIVEL I")}</span>
+            <span class="plano-divider">|</span>
+            <span class="plano-area">${p.m2 || 0} m²</span>
+          </div>
+        </div>
+
+        <div class="plano-wrap" id="planoWrap">
+          <img src="${escapeAttr(plano.imagen)}" alt="Plano del inmueble" />
+          ${(plano.puntos || [])
+            .map(
+              (pt, i) => `
+            <button type="button" class="plano-point"
+              style="left:${Number(pt.x) || 50}%; top:${Number(pt.y) || 50}%;"
+              data-room-index="${i}"
+              aria-label="Ver ${escapeAttr(pt.nombre || "ambiente")}">
+              <span class="plano-dot"></span>
+              <span class="plano-label">${escapeHtml(pt.nombre || "Zona")}</span>
+            </button>
+          `
+            )
+            .join("")}
+        </div>
+
+        <div class="plano-foot">
+          <span>NIVEL I</span>
+          <small>*Planos, acabados y medidas referenciales. Pueden variar según tipo de departamento.</small>
+        </div>
       </div>
       <p class="plano-hint">Haz clic en los puntos para ver cada ambiente</p>
     `

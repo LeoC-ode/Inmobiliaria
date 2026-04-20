@@ -716,54 +716,186 @@ body.modal-open {
   flex-shrink: 0;
 }
 
-/* PLANO INTERACTIVO */
-.plano-wrap {
-  position: relative;
+/* PLANO INTERACTIVO — marco profesional estilo arquitectónico */
+.plano-frame {
+  background: #fff;
   border-radius: var(--radius);
   overflow: hidden;
-  background: var(--bg);
-  margin-bottom: 10px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+}
+
+.plano-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 22px;
+  background: #1e1a16;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+}
+
+.plano-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 1px;
+  flex-wrap: wrap;
+}
+
+.plano-slash {
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.plano-brand strong {
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.plano-zone {
+  font-size: 0.72rem;
+  color: #b8a88f;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.plano-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.plano-divider {
+  color: #6b5a48;
+  font-weight: 300;
+}
+
+.plano-area {
+  color: var(--accent);
+}
+
+.plano-wrap {
+  position: relative;
+  background: #f5f0e8;
+  padding: 20px;
 }
 
 .plano-wrap img {
   width: 100%;
   display: block;
-  opacity: 0.92;
+  border-radius: 6px;
+}
+
+.plano-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 22px;
+  background: #f5f0e8;
+  border-top: 1px solid var(--border);
+  font-size: 0.75rem;
+  color: var(--muted);
+  flex-wrap: wrap;
+}
+
+.plano-foot span {
+  font-weight: 700;
+  color: #2D2D2D;
+  letter-spacing: 2px;
+}
+
+.plano-foot small {
+  font-style: italic;
+  opacity: 0.8;
 }
 
 .plano-point {
   position: absolute;
   transform: translate(-50%, -50%);
-  background: var(--accent);
-  color: #fff;
-  border: 3px solid #fff;
-  border-radius: 999px;
-  padding: 8px 14px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  white-space: nowrap;
-  box-shadow: var(--shadow-md);
+  background: transparent;
+  border: none;
+  padding: 0;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  z-index: 2;
+}
+
+.plano-dot {
+  width: 18px;
+  height: 18px;
+  background: var(--accent);
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   transition: transform var(--transition), background var(--transition);
   animation: pulse 2.2s ease-in-out infinite;
 }
 
-.plano-point:hover {
+.plano-label {
+  background: #1e1a16;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.plano-point:hover .plano-dot,
+.plano-point:focus-visible .plano-dot {
   background: var(--accent-dark);
-  transform: translate(-50%, -50%) scale(1.1);
+  transform: scale(1.25);
   animation: none;
 }
 
+.plano-point:hover .plano-label,
+.plano-point:focus-visible .plano-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @keyframes pulse {
-  0%, 100% { box-shadow: var(--shadow-md), 0 0 0 0 rgba(198, 124, 78, 0.55); }
-  50% { box-shadow: var(--shadow-md), 0 0 0 12px rgba(198, 124, 78, 0); }
+  0%, 100% { box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25), 0 0 0 0 rgba(198, 124, 78, 0.55); }
+  50% { box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25), 0 0 0 10px rgba(198, 124, 78, 0); }
 }
 
 .plano-hint {
   color: var(--muted);
   font-size: 0.85rem;
   text-align: center;
-  margin-top: 8px;
+  margin-top: 12px;
+}
+
+@media (max-width: 600px) {
+  .plano-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 12px 16px;
+  }
+  .plano-wrap {
+    padding: 12px;
+  }
+  .plano-dot {
+    width: 14px;
+    height: 14px;
+    border-width: 2px;
+  }
 }
 
 .detail-cta {
