@@ -5,7 +5,7 @@
 
 // URL del endpoint de Google Apps Script para guardar leads en Google Sheets.
 // Reemplaza con tu URL desplegada: https://script.google.com/macros/s/XXXX/exec
-const SCRIPT_URL = "PEGA_AQUI_TU_URL_DE_GOOGLE_APPS_SCRIPT";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw_QwIdk7HlN41qM6iVyU-TxUp5h2T9TlmADl5nDxnHhq13LbV8TRlKV3DqI72wutftNg/exec";
 
 // Ruta al JSON con las propiedades
 const DATA_URL = "data/propiedades.json";
